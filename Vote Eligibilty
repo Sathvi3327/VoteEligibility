@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int sub(int a, int b);
+int main()
+{
+	int age;
+	int a = 18;
+	cout<<"\t\t\tTO CHECK WHETHER YOU ARE ELIGIBLE TO VOTE OR NOT\n";
+	cout<<"Enter your age: ";
+	cin>>age;
+	if(age<17)
+	{
+		cout<<"You are minor,so you cannot vote.\n";
+		cout<<"You have to wait "<<sub(a,age)<<" years more to vote.";
+	}else if(age == 17){
+		cout<<"You are a minor,so you cannot vote.\n";
+		cout<<"You still have to wait one more year to vote.";
+	}else{
+		cout<<"Congratulations!!\n";
+		cout<<"You are a major and you have the right to vote.\n";
+		cout<<"So what are you waiting for! go and poll your valuable vote.";
+	}
+}
+int sub(int a, int b)
+{
+	return(a-b);
+}
